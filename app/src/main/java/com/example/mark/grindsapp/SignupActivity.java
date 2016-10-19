@@ -21,6 +21,11 @@ import android.widget.Toast;
 public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
 
+    TextInputEditText editTextName, editTextEmail, editTextPassword;
+
+
+    LoginDataBaseAdapter loginDataBaseAdapter;
+
     @InjectView(R.id.input_name) TextInputEditText _nameText;
     @InjectView(R.id.input_email) TextInputEditText _emailText;
     @InjectView(R.id.input_password) TextInputEditText _passwordText;
@@ -50,6 +55,7 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     public void signup() {
+
         Log.d(TAG, "Signup");
 
         if (!validate()) {
@@ -70,6 +76,8 @@ public class SignupActivity extends AppCompatActivity {
         String password = _passwordText.getText().toString();
 
         // TODO: Implement your own signup logic here.
+        //This is where the database code would be put
+
 
         new android.os.Handler().postDelayed(
                 new Runnable() {
@@ -81,10 +89,11 @@ public class SignupActivity extends AppCompatActivity {
                         progressDialog.dismiss();
                     }
                 }, 3000);
+
     }
 
 
-    public void onSignupSuccess() {
+    public void onSignupSuccess() { //This is where we state what happens if it is a success - move to new activity
         _signupButton.setEnabled(true);
         setResult(RESULT_OK, null);
         finish();

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginActivity">
+    <!-- Let the search bring you to search activity - Must make it only available for ROG?? -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/action_search"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"/>
+    <!-- Home - something not working quite right with the icon - it is the wrong colour -->
+    <item android:id="@+id/home"
+        android:icon="@drawable/action_home2"
+        android:alpha="0.1"
+        android:title="@string/my_profile"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/schedule"
+        android:icon="@drawable/android_schedule"
+        android:alpha="0.1"
+        android:title="@string/my_schedule"
+        app:showAsAction="ifRoom" />
+
+    <!-- app:showAsAction="never" - This means just to show it in the menu rather than the taskbar itself -->
+    <item
+        android:id="@+id/about"
+        android:icon="@android:drawable/ic_dialog_info"
+        app:showAsAction="never"
+        android:title="@string/about">
+    </item>
+    <item
+        android:id="@+id/logout"
+        app:showAsAction="never"
+        android:title="@string/logout">
+    </item>
+
+
+</menu>

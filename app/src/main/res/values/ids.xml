@@ -4,4 +4,6 @@
     <item name="input_password" type="id">passwordInput</item>
     <item name="btn_Login" type="id">loginButton</item>
     <item name="Link_signup" type="id">signupLink</item>
+    <item name="editTextUsernameLogin" type="id">Edit Username Login</item>
+    <item name="editTextPasswordLogin" type="id">Edit Password Login</item>
 </resources>
