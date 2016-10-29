@@ -26,6 +26,7 @@ import butterknife.InjectView;
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
+    private static final int REQUEST_LOGIN = 0;
 
     @InjectView(R.id.input_username) TextInputEditText _usernameText;
     @InjectView(R.id.input_password) TextInputEditText _passwordText;
@@ -91,6 +92,9 @@ public class LoginActivity extends AppCompatActivity {
                         progressDialog.dismiss();
                     }
                 }, 3000);
+
+        Intent intent = new Intent(getApplicationContext(), Homescreen.class);
+        startActivityForResult(intent, REQUEST_LOGIN);
     }
 
     @Override
@@ -138,51 +142,5 @@ public class LoginActivity extends AppCompatActivity {
         return valid;
     }
 
-    //All below code is for the taskbar - here only  for testing at the moment will it be added to the other acttivites after login is completed.
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.taskbar_menu, menu);
-
-        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (SearchView) menu.findItem(R.id.action_search)
-                .getActionView();
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        switch (item.getItemId()) {
-            case R.id.action_search:
-                //search action
-                return true;
-            case R.id.home:
-                //location found
-                Home();
-                return true;
-            case R.id.schedule:
-                //reset found
-                return true;
-            case R.id.about:
-                //about action
-                return true;
-            case R.id.logout:
-                //exit action
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
-
-
-    private void Home() {
-        Intent i = new Intent(LoginActivity.this, SignupActivity.class);
-        startActivity(i);
-    }
 
 }
