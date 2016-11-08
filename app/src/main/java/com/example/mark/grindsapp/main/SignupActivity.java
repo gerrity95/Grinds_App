@@ -1,4 +1,4 @@
-package com.example.mark.grindsapp;
+package com.example.mark.grindsapp.main;
 
 /**
  * Created by Mark on 28/09/2016.
@@ -11,11 +11,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-        import butterknife.ButterKnife;
+import com.example.mark.grindsapp.R;
+import com.example.mark.grindsapp.framework.util.LoginDataBaseAdapter;
+
+import butterknife.ButterKnife;
         import butterknife.InjectView;
 
 public class SignupActivity extends AppCompatActivity {

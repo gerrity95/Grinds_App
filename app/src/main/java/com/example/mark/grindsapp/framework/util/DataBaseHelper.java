@@ -1,4 +1,4 @@
-package com.example.mark.grindsapp;
+package com.example.mark.grindsapp.framework.util;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
