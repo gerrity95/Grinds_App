@@ -10,23 +10,26 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.example.mark.grindsapp.R;
-import com.example.mark.grindsapp.framework.util.MenuFunctionality;
-
 /**
  * Created by Mark on 08/11/2016.
  */
 
-public class TutorList extends AppCompatActivity {
-
-    MenuFunctionality menuFunctionality = new MenuFunctionality();
+public class TutorList extends Homescreen {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutor_list);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -64,4 +67,6 @@ public class TutorList extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    */
 }

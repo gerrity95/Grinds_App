@@ -24,12 +24,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".main.SignupActivity" android:theme="@style/AppTheme" />
-        <activity android:name=".main.SignupChoice" android:theme="@style/AppTheme" />
-        <activity android:name=".main.Homescreen" android:theme="@style/AppTheme" />
-        <activity android:name=".main.TutorList" android:theme="@style/AppTheme" />
-        <activity android:name=".main.Messages" android:theme="@style/AppTheme" />
-        <activity android:name=".main.Schedule" android:theme="@style/AppTheme" />
+        <activity android:name=".main.SignupActivity" android:theme="@style/AppTheme" android:label="TutorMe"/>
+        <activity android:name=".main.SignupChoice" android:theme="@style/AppTheme" android:label="TutorMe"/>
+        <activity android:name=".main.Homescreen" android:theme="@style/AppTheme" android:label="TutorMe"/>
+        <activity android:name=".main.TutorList" android:theme="@style/AppTheme" android:label="TutorMe"/>
+        <activity android:name=".main.Messages" android:theme="@style/AppTheme" android:label="TutorMe"/>
+        <activity android:name=".main.Schedule" android:theme="@style/AppTheme" android:label="TutorMe"/>
     </application>
 
 </manifest>

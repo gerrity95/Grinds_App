@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Grinds App</string>
+    <string name="app_name">TutorMe</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>

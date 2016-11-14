@@ -23,7 +23,6 @@ import butterknife.InjectView;
  */
 public class Homescreen extends AppCompatActivity {
 
-    MenuFunctionality menuFunctionality = new MenuFunctionality();
     public static final int new_Activity = 0;
 
     @InjectView(R.id.imageButton_search) ImageButton searchTutors;
@@ -88,7 +87,7 @@ public class Homescreen extends AppCompatActivity {
                 return true;
             case R.id.home:
                 //location found
-                menuFunctionality.Home();
+                Home();
                 return true;
             case R.id.schedule:
                 //reset found
@@ -97,11 +96,23 @@ public class Homescreen extends AppCompatActivity {
                 //about action
                 return true;
             case R.id.logout:
-                menuFunctionality.Logout();
+                Logout();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void Home() {
+
+        Intent intent = new Intent(Homescreen.this, Homescreen.class);
+        startActivity(intent);
+    }
+
+    public void Logout()
+    {
+        Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(i);
     }
 
 
