@@ -31,7 +31,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Welcome, Mark"
+                android:text="@string/welcome_message"
                 android:id="@+id/textView2"
                 android:textColor="#363636"
                 android:textSize="25sp"

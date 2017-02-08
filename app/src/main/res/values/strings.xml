@@ -20,4 +20,5 @@
     <string name="logout">Logout</string>
     <string name="student_choice">Student</string>
     <string name="tutor_choice">Tutor</string>
+    <string name="welcome_message">Welcome Mark</string>
 </resources>
