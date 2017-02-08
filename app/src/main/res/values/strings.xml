@@ -18,4 +18,6 @@
     <string name="my_schedule">My Schedule</string>
     <string name="about">About Us</string>
     <string name="logout">Logout</string>
+    <string name="student_choice">Student</string>
+    <string name="tutor_choice">Tutor</string>
 </resources>

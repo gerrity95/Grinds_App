@@ -1,4 +1,4 @@
-package com.example.mark.grindsapp;
+package com.example.mark.grindsapp.UserFiles;
 
 import android.app.SearchManager;
 import android.content.Context;
@@ -9,6 +9,9 @@ import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import com.example.mark.grindsapp.PreLogin.LoginActivity;
+import com.example.mark.grindsapp.R;
 
 /**
  * Created by Mark on 04/10/2016.

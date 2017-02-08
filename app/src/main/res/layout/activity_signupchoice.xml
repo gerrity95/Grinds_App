@@ -15,7 +15,7 @@
         android:paddingRight="24dp"
         android:weightSum="1">
 
-        <ImageView android:src="@drawable/logo2"
+        <ImageView android:src="@mipmap/tutormelogo"
             android:layout_width="fill_parent"
             android:layout_height="100dp"
             android:layout_marginBottom="24dp"
@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Before we start, please tell us are you here to give grinds are get grinds?"
+            android:text="Before we start, please tell us are you here to sign up as a tutor or a student?"
             android:padding="10dp"
             android:textSize="20dp"
             android:textStyle="italic" />
@@ -39,7 +39,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="0dp"
             android:padding="12dp"
-            android:text="Receive Grinds"/>
+            android:text="Student"/>
 
         <!-- Signup Button -->
         <android.support.v7.widget.AppCompatButton
@@ -49,7 +49,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:padding="12dp"
-            android:text="Provide Grinds"/>
+            android:text="Tutor"/>
 
         <TextView android:id="@+id/link_login"
             android:layout_width="fill_parent"

@@ -174,7 +174,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView"
-                android:src="@drawable/bookLogo"
+                android:src="@drawable/booklogo"
                 android:layout_weight="1" />
 
             <TextView
