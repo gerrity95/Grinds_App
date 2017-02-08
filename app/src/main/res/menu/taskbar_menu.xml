@@ -3,7 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     tools:context=".PreLogin.LoginActivity">
+=======
+    tools:context=".main.LoginActivity">
+>>>>>>> 5740f9e3c614aa4093e82adb89e6607ecb2caa37
     <!-- Let the search bring you to search activity - Must make it only available for ROG?? -->
     <item
         android:id="@+id/action_search"

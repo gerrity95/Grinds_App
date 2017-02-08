@@ -15,12 +15,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/topSection"
-        android:background="#2d9abd"
+        android:gravity="center"
+        android:background="#ededed"
         android:paddingLeft="5dp"
         android:paddingRight="20dp"
         android:paddingTop="15dp"
         android:paddingBottom="40dp">
-
+        <!-- android:background="@mipmap/ic_background" -->
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
@@ -32,18 +33,22 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Welcome, Mark"
                 android:id="@+id/textView2"
-                android:textColor="#FFFFFF"
+                android:textColor="#363636"
                 android:textSize="25sp"
                 android:paddingBottom="20dp"
                 android:layout_weight="1"
                 android:paddingLeft="20dp"
                 android:gravity="center_vertical" />
 
-        <ImageView
+            <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:maxWidth="120dp"
+            android:maxHeight="120dp"
+            android:scaleType="fitCenter"
             android:id="@+id/imageView2"
-            android:src="@android:mipmap/sym_def_app_icon"
+            android:src="@mipmap/ic_tutor_me_logo"
             android:layout_weight="2"/>
 
             </LinearLayout>
@@ -75,7 +80,7 @@
             <ImageButton
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageButton_history"
+                android:id="@+id/imageButton_schedule"
                 android:src="@mipmap/ic_calender_logo"
                 android:background="#00000000"
                 android:layout_weight="1"/>
@@ -94,7 +99,7 @@
                 android:id="@+id/textView3"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:textColor="#FFFFFF" />
+                android:textColor="#363636" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -103,7 +108,7 @@
                 android:id="@+id/textView4"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#363636"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -112,7 +117,7 @@
                 android:id="@+id/textView5"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#363636"/>
         </LinearLayout>
 
     </LinearLayout>
