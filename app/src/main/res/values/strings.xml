@@ -21,4 +21,32 @@
     <string name="student_choice">Student</string>
     <string name="tutor_choice">Tutor</string>
     <string name="welcome_message">Welcome Mark</string>
+    <string name="logo_description">Tutor Me Logo</string>
+    <string name="location_prompt">Locations</string>
+    <string name="subject_prompt">Subjects</string>
+
+
+    <string-array name="locations">
+        <item>Clare</item>
+        <item>Galway</item>
+        <item>Kerry</item>
+        <item>Leitrim</item>
+        <item>Mayo</item>
+        <item>Roscommon</item>
+        <item>Sligo</item>
+    </string-array>
+
+    <string-array name="subjects">
+        <item>Business</item>
+        <item>English</item>
+        <item>Economics</item>
+        <item>Geography</item>
+        <item>History</item>
+        <item>Irish</item>
+        <item>Maths</item>
+        <item>Spanish</item>
+        <item>Technical Graphics</item>
+    </string-array>
+
+
 </resources>

@@ -7,12 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-<<<<<<< HEAD:app/src/main/java/com/example/mark/grindsapp/SignupChoice.java
 import com.example.mark.grindsapp.PreLogin.LoginActivity;
 import com.example.mark.grindsapp.PreLogin.SignupActivity;
-=======
 import com.example.mark.grindsapp.R;
->>>>>>> 5740f9e3c614aa4093e82adb89e6607ecb2caa37:app/src/main/java/com/example/mark/grindsapp/main/SignupChoice.java
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

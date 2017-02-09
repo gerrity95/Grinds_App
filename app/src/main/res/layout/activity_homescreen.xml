@@ -1,204 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:backgroundTint="#cc2626"
+    android:backgroundTintMode="screen">
 
-    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/topSection"
-        android:gravity="center"
-        android:background="#ededed"
-        android:paddingLeft="5dp"
-        android:paddingRight="20dp"
-        android:paddingTop="15dp"
-        android:paddingBottom="40dp">
-        <!-- android:background="@mipmap/ic_background" -->
+
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="wrap_content"
+            android:id="@+id/topSection"
+            android:gravity="center"
+            android:background="#ededed"
+            android:paddingStart="5dp"
+            android:paddingEnd="20dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="40dp">
+            <!-- android:background="@mipmap/ic_background" -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/welcome_message"
+                    android:id="@+id/textView2"
+                    android:textColor="#363636"
+                    android:textSize="25sp"
+                    android:paddingBottom="20dp"
+                    android:layout_weight="1"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="0dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="0dp"
+                    android:gravity="center_vertical" />
+
+                <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/logo_description"
+                android:adjustViewBounds="true"
+                android:maxWidth="120dp"
+                android:maxHeight="120dp"
+                android:scaleType="fitCenter"
+                android:id="@+id/imageView2"
+                android:src="@mipmap/ic_tutor_me_logo"
+                android:layout_weight="2"/>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/middleSection"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="30dp"
+            android:paddingTop="25dp"
+            android:background="@drawable/home_bottom_border">
+
 
             <TextView
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/welcome_message"
-                android:id="@+id/textView2"
-                android:textColor="#363636"
-                android:textSize="25sp"
-                android:paddingBottom="20dp"
-                android:layout_weight="1"
-                android:paddingLeft="20dp"
-                android:gravity="center_vertical" />
+                android:text="Upcoming Grinds"
+                android:id="@+id/UpcomingGrindsTitle"
+                android:textAlignment="center"
+                android:fontFamily="@string/abc_font_family_display_4_material" />
 
-            <ImageView
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:id="@+id/GrindName"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address:"
+                    android:id="@+id/GrindAddress"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:id="@+id/GrindDate"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Time:"
+                    android:id="@+id/GrindTime"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="More Details..."
+                    android:id="@+id/GrindMoreDetails"
+                    android:padding="5dp"
+                    android:textColor="#0645AD"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:adjustViewBounds="true"
-            android:maxWidth="120dp"
-            android:maxHeight="120dp"
-            android:scaleType="fitCenter"
-            android:id="@+id/imageView2"
-            android:src="@mipmap/ic_tutor_me_logo"
-            android:layout_weight="2"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomSection"
+            android:paddingLeft="20dp"
+            android:paddingTop="25dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="20dp"
+            android:background="@drawable/home_bottom_border">
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Tutor Search"
+                android:id="@+id/TutorSearchTitle"
+                android:fontFamily="@string/abc_font_family_display_4_material"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Location"
+                        android:id="@+id/LocationSearchHeading"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="5dp" />
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/location_spinner"
+                        android:entries="@array/locations"
+                        android:prompt="@string/location_prompt"
+                        android:padding="5dp"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Subject"
+                        android:id="@+id/SubjectSearchHeading"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="5dp" />
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/subject_spinner"
+                        android:entries="@array/subjects"
+                        android:prompt="@string/subject_prompt"
+                        android:padding="5dp"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
 
             </LinearLayout>
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:paddingTop="20dp">
-
-            <ImageButton
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton_search"
-                android:src="@mipmap/ic_image_search"
-                android:background="#00000000"
-                android:layout_weight="1"
-                 />
-
-            <ImageButton
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton_messages"
-                android:src="@mipmap/ic_image_message"
-                android:background="#00000000"
-                android:layout_weight="1"
-                 />
-
-            <ImageButton
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton_schedule"
-                android:src="@mipmap/ic_calender_logo"
-                android:background="#00000000"
-                android:layout_weight="1"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-
-            <TextView
-                android:layout_width="fill_parent"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Find a Tutor"
-                android:id="@+id/textView3"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:textColor="#363636" />
+                android:weightSum="2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:text="Messages"
-                android:id="@+id/textView4"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:textColor="#363636"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Advanced Options..."
+                    android:id="@+id/tSearchAdvanced"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:textColor="#0645AD"/>
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:text="View Schedule"
-                android:id="@+id/textView5"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:textColor="#363636"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search"
+                    android:id="@+id/tSearchButton"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:paddingTop="10dp" />
+
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/middleSection"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="30dp"
-        android:paddingTop="25dp">
-
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
-
-            <ImageView
-                android:layout_width="47dp"
-                android:layout_height="47dp"
-                android:id="@+id/imageView3"
-                android:src="@android:drawable/ic_menu_info_details" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Upcoming Appointments"
-                android:id="@+id/textView6"
-                android:layout_weight="1"
-                android:paddingLeft="10dp"
-                android:gravity="center_vertical|center_horizontal"
-                android:textColor="#363636" />
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bottomSection"
-        android:paddingLeft="20dp"
-        android:paddingTop="25dp"
-        android:paddingRight="30dp"
-        android:paddingBottom="20dp">
-
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView"
-                android:src="@drawable/booklogo"
-                android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="History/News"
-                android:id="@+id/textView"
-                android:layout_weight="1"
-                android:paddingLeft="10dp"
-                android:gravity="center_vertical"
-                android:textColor="#363636" />
-
-        </LinearLayout>
-
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/listView" />
-    </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

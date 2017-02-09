@@ -25,9 +25,6 @@ public class Homescreen extends AppCompatActivity {
 
     public static final int new_Activity = 0;
 
-    @InjectView(R.id.imageButton_search) ImageButton searchTutors;
-    @InjectView(R.id.imageButton_messages) ImageButton viewMessages;
-    @InjectView(R.id.imageButton_schedule) ImageButton viewSchedule;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,32 +33,7 @@ public class Homescreen extends AppCompatActivity {
 
         ButterKnife.inject(this);
 
-        searchTutors.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Start the TutorList activity
-                Intent intent = new Intent(getApplicationContext(), TutorList.class);
-                startActivityForResult(intent, new_Activity);
-            }
-        });
 
-        viewMessages.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Start the Message activity
-                Intent intent = new Intent(getApplicationContext(), Messages.class);
-                startActivityForResult(intent, new_Activity);
-            }
-        });
-
-        viewSchedule.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Start the Schedule activity
-                Intent intent = new Intent(getApplicationContext(), Schedule.class);
-                startActivityForResult(intent, new_Activity);
-            }
-        });
 
     }
 

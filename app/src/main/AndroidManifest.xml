@@ -14,11 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-<<<<<<< HEAD
+
             android:name=".PreLogin.LoginActivity"
-=======
-            android:name=".main.LoginActivity"
->>>>>>> 5740f9e3c614aa4093e82adb89e6607ecb2caa37
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
 
@@ -28,18 +25,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
         <activity android:name=".PreLogin.SignupActivity" android:theme="@style/AppTheme" />
-        <activity android:name=".SignupChoice" android:theme="@style/AppTheme" />
         <activity android:name=".UserFiles.Homescreen" android:theme="@style/AppTheme" />
-=======
+
         <activity android:name=".main.SignupActivity" android:theme="@style/AppTheme" android:label="TutorMe"/>
         <activity android:name=".main.SignupChoice" android:theme="@style/AppTheme" android:label="TutorMe"/>
         <activity android:name=".main.Homescreen" android:theme="@style/AppTheme" android:label="TutorMe"/>
         <activity android:name=".main.TutorList" android:theme="@style/AppTheme" android:label="TutorMe"/>
         <activity android:name=".main.Messages" android:theme="@style/AppTheme" android:label="TutorMe"/>
         <activity android:name=".main.Schedule" android:theme="@style/AppTheme" android:label="TutorMe"/>
->>>>>>> 5740f9e3c614aa4093e82adb89e6607ecb2caa37
-    </application>
+</application>
 
 </manifest>

@@ -3,11 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-<<<<<<< HEAD
     tools:context=".PreLogin.LoginActivity">
-=======
     tools:context=".main.LoginActivity">
->>>>>>> 5740f9e3c614aa4093e82adb89e6607ecb2caa37
+
+
     <!-- Let the search bring you to search activity - Must make it only available for ROG?? -->
     <item
         android:id="@+id/action_search"
@@ -17,7 +16,7 @@
         app:actionViewClass="android.support.v7.widget.SearchView"/>
     <!-- Home - something not working quite right with the icon - it is the wrong colour -->
     <item android:id="@+id/home"
-        android:icon="@drawable/action_home2"
+        android:icon="@drawable/transpwhitehome"
         android:alpha="0.1"
         android:title="@string/my_profile"
         app:showAsAction="ifRoom" />

@@ -13,20 +13,7 @@
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-<<<<<<< HEAD
-        <ImageView android:src="@drawable/tutor_logo"
-            android:layout_width="fill_parent"
-            android:layout_height="100dp"
-=======
-        <TextView
-            android:text="TutorMe - Find the perfect tutor. "
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/login_heading"
-            android:layout_weight="0.17"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:fontFamily="sans-serif"
-            android:textStyle="normal|italic" />
+        =======
 
         <ImageView android:src="@mipmap/ic_tutor_me_logo"
             android:layout_width="match_parent"
@@ -35,7 +22,6 @@
             android:maxWidth="200dp"
             android:maxHeight="150dp"
             android:scaleType="fitCenter"
->>>>>>> 5740f9e3c614aa4093e82adb89e6607ecb2caa37
             android:layout_marginBottom="24dp"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.17" />
@@ -75,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapWords"
-                android:hint="Name" />
+                android:hint="Username" />
         </android.support.design.widget.TextInputLayout>
 
         <!-- Email Label -->
