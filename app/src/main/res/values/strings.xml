@@ -3,7 +3,7 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
+    <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
@@ -24,6 +24,19 @@
     <string name="logo_description">Tutor Me Logo</string>
     <string name="location_prompt">Locations</string>
     <string name="subject_prompt">Subjects</string>
+    <string name="upcomingName">Name:</string>
+    <string name="upcomingAddress">Address:</string>
+    <string name="upcomingDate">Date:</string>
+    <string name="upcomingTime">Time:</string>
+    <string name="upcomingDetails">More Details...</string>
+    <string name="search_title">Tutor Search</string>
+    <string name="loc_spinner_title">Location</string>
+    <string name="subj_spinner_title">Subject</string>
+    <string name="search_options">Advanced Options...</string>
+    <string name="search_button">Search</string>
+    <string name="username_hint">Username</string>
+    <string name="create_account">Create Account</string>
+    <string name="login_link">Already a member? Login</string>
 
 
     <string-array name="locations">
