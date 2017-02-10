@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.mark.grindsapp.PreLogin.LoginActivity;
-import com.example.mark.grindsapp.PreLogin.SignupActivity;
+import com.example.mark.grindsapp.main.PreLogin.LoginActivity;
+import com.example.mark.grindsapp.main.PreLogin.SignupActivity;
 import com.example.mark.grindsapp.R;
 
 import butterknife.ButterKnife;

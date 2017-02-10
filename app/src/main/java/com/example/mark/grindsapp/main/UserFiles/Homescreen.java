@@ -4,14 +4,22 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.mark.grindsapp.main.PreLogin.LoginActivity;
 import com.example.mark.grindsapp.R;
+import com.example.mark.grindsapp.main.UserFiles.AdditionalFunctions.AdvancedSearch;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 
 /**
  * Created by Mark on 04/10/2016.
@@ -19,10 +27,39 @@ import com.example.mark.grindsapp.R;
 public class Homescreen extends AppCompatActivity {
 
 
+
+    private static final int REQUEST_ADVANCED_OPTIONS = 0;
+
+    @InjectView(R.id.tSearchAdvanced) TextView _advancedOptions;
+    @InjectView(R.id.tSearchButton) Button _searchButton;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homescreen);
+
+        ButterKnife.inject(this);
+
+
+        _advancedOptions.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // Start the Advanced Options activity
+                Intent intent = new Intent(getApplicationContext(), AdvancedSearch.class);
+                startActivityForResult(intent, REQUEST_ADVANCED_OPTIONS);
+            }
+        });
+
+        _searchButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // Start the Advanced Options activity
+                Intent intent = new Intent(getApplicationContext(), AdvancedSearch.class);
+                startActivityForResult(intent, REQUEST_ADVANCED_OPTIONS);
+            }
+        });
 
     }
 
