@@ -1,13 +1,20 @@
 package com.example.mark.grindsapp.main.UserFiles.AdditionalFunctions;
 
 
+import android.icu.text.DateFormat;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.DatePicker;
 
 
 import com.example.mark.grindsapp.R;
+
+import java.lang.reflect.Field;
+import java.text.Format;
 
 
 /**
@@ -15,12 +22,17 @@ import com.example.mark.grindsapp.R;
  */
 public class AdvancedSearch extends AppCompatActivity {
 
+    DatePicker datePicker;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advanced_search);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        datePicker = (DatePicker) findViewById(R.id.simpleDatePicker);
+
+        hideYear(datePicker);
 
 
 
@@ -40,6 +52,28 @@ public class AdvancedSearch extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+
+    public void hideYear(DatePicker dt)
+    {
+        try {
+            Field f[] = dt.getClass().getDeclaredFields();
+            for (Field field : f) {
+                 if (field.getName().equals("mYearPicker") || field.getName().equals("mYearSpinner")) {
+                     field.setAccessible(true);
+                     Object yearPicker = new Object();
+                     yearPicker = field.get(dt);
+                     ((View) yearPicker).setVisibility(View.GONE);
+                 }
+
+            }
+        } catch (SecurityException e) {
+            Log.d("ERROR", e.getMessage());
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }

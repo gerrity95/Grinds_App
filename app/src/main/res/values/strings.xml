@@ -37,7 +37,19 @@
     <string name="username_hint">Username</string>
     <string name="create_account">Create Account</string>
     <string name="login_link">Already a member? Login</string>
+    <string name="time_input">Time</string>
 
+
+    <string-array name="times">
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+        <item>21:00</item>
+    </string-array>
 
     <string-array name="locations">
         <item>Clare</item>
