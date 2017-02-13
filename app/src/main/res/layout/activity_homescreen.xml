@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fitsSystemWindows="true">
@@ -78,7 +79,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Upcoming Grinds"
+                android:text="@string/upcomingGrindsTitle"
                 android:id="@+id/UpcomingGrindsTitle"
                 android:textAlignment="center"
                 android:fontFamily="@string/abc_font_family_display_4_material" />
@@ -180,7 +181,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#ededed"
-                        android:layout_marginRight="10dp">
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp">
                     <Spinner
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -215,7 +217,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#ededed"
-                        android:layout_marginLeft="10dp">
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp">
 
                     <Spinner
                         android:layout_width="wrap_content"
@@ -284,7 +287,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Schedule"
+                android:text="@string/schedule_title"
                 android:id="@+id/ScheduleTitle"
                 android:fontFamily="@string/abc_font_family_display_4_material"
                 android:textAlignment="center"
@@ -301,6 +304,85 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/ScheduleCalendar" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Messages"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingRight="0dp"
+            android:paddingEnd="0dp"
+            android:background="@drawable/home_bottom_border"
+            android:paddingBottom="30dp"
+            android:paddingTop="25dp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/messageTitle"
+                android:id="@+id/MessageTitle"
+                android:fontFamily="@string/abc_font_family_display_4_material"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="@string/recent_messages_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recentMessages"
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="4">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/sample_headshot"
+                        android:id="@+id/imageView3"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:scaleType="fitStart"
+                        android:contentDescription="@string/headshot_descrip"/>
+
+                    <TextView
+                        android:text="@string/recent_tutor_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tutor_name"
+                        android:padding="10dp"
+                        android:textSize="12sp"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:text="@string/all_messages"
+                    android:id="@+id/all_messages"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:autoLink="all"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:textColor="#0645AD"/>
+
             </LinearLayout>
         </LinearLayout>
 

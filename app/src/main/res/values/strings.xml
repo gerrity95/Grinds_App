@@ -38,6 +38,16 @@
     <string name="create_account">Create Account</string>
     <string name="login_link">Already a member? Login</string>
     <string name="time_input">Time</string>
+    <string name="messageTitle">Messages</string>
+    <string name="submit">Submit</string>
+    <string name="all_messages">View All Messages...</string>
+    <string name="upcomingGrindsTitle">Upcoming Grinds</string>
+    <string name="schedule_title">Schedule</string>
+    <string name="recent_messages_title">Recent Messages</string>
+    <string name="headshot_descrip">Picture of a tutor</string>
+    <string name="recent_tutor_message">James Burke has sent you a message.</string>
+    <string name="advanced_search_title">Advanced Search</string>
+    <string name="date_title">Date</string>
 
 
     <string-array name="times">

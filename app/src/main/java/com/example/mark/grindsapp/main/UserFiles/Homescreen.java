@@ -11,11 +11,15 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.TextView;
 
 import com.example.mark.grindsapp.main.PreLogin.LoginActivity;
 import com.example.mark.grindsapp.R;
 import com.example.mark.grindsapp.main.UserFiles.AdditionalFunctions.AdvancedSearch;
+
+import java.util.Calendar;
+import java.util.Date;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -31,6 +35,8 @@ public class Homescreen extends AppCompatActivity {
 
     @InjectView(R.id.tSearchAdvanced) TextView _advancedOptions;
     @InjectView(R.id.tSearchButton) Button _searchButton;
+
+    CalendarView calendarView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,6 +65,9 @@ public class Homescreen extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_ADVANCED_OPTIONS);
             }
         });
+
+        calendarView = (CalendarView) findViewById(R.id.ScheduleCalendar);
+
 
     }
 
