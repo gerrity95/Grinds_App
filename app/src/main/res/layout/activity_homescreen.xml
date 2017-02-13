@@ -172,8 +172,15 @@
                         android:text="@string/loc_spinner_title"
                         android:id="@+id/LocationSearchHeading"
                         android:textAlignment="center"
-                        android:layout_marginBottom="5dp" />
+                        android:layout_marginBottom="5dp"
+                        />
 
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ededed"
+                        android:layout_marginRight="10dp">
                     <Spinner
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -181,7 +188,12 @@
                         android:entries="@array/locations"
                         android:prompt="@string/location_prompt"
                         android:padding="5dp"
-                        android:textAlignment="center" />
+                        android:spinnerMode="dropdown" />
+
+                    </RelativeLayout>
+
+
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -199,6 +211,12 @@
                         android:textAlignment="center"
                         android:layout_marginBottom="5dp" />
 
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ededed"
+                        android:layout_marginLeft="10dp">
+
                     <Spinner
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -206,7 +224,9 @@
                         android:entries="@array/subjects"
                         android:prompt="@string/subject_prompt"
                         android:padding="5dp"
-                        android:textAlignment="center" />
+                        android:spinnerMode="dropdown" />
+
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -240,7 +260,9 @@
                     android:id="@+id/tSearchButton"
                     android:layout_weight="1"
                     android:padding="5dp"
-                    android:paddingTop="10dp" />
+                    android:paddingTop="10dp"
+                    android:background="@drawable/green_button"
+                    android:textColor="#FFFFFF" />
 
             </LinearLayout>
         </LinearLayout>

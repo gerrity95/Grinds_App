@@ -115,7 +115,8 @@
                     android:paddingTop="5dp"
                     android:paddingBottom="10dp"
                     android:paddingLeft="15dp"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:gravity="center_vertical" />
 
             </LinearLayout>
 
