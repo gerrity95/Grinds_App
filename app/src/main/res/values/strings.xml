@@ -48,6 +48,8 @@
     <string name="recent_tutor_message">James Burke has sent you a message.</string>
     <string name="advanced_search_title">Advanced Search</string>
     <string name="date_title">Date</string>
+    <string name="newSearch">New Search</string>
+    <string name="view_profile">View Profile...</string>
 
 
     <string-array name="times">

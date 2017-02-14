@@ -13,14 +13,14 @@ import com.example.mark.grindsapp.main.PreLogin.LoginActivity;
 public class MenuFunctionality extends AppCompatActivity {
 
     public void Home() {
-        Intent i = new Intent(this, Homescreen.class);
-        startActivity(i);
+        Intent bringHome = new Intent(this, Homescreen.class);
+        startActivity(bringHome);
     }
 
     public void Logout()
     {
-        Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-        startActivity(i);
+        Intent logout = new Intent(this, LoginActivity.class);
+        startActivityForResult(logout, 0);
     }
 
 

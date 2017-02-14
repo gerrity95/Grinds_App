@@ -14,9 +14,11 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
 
+import com.example.mark.grindsapp.framework.util.MenuFunctionality;
 import com.example.mark.grindsapp.main.PreLogin.LoginActivity;
 import com.example.mark.grindsapp.R;
 import com.example.mark.grindsapp.main.UserFiles.AdditionalFunctions.AdvancedSearch;
+import com.example.mark.grindsapp.main.UserFiles.AdditionalFunctions.TutorSearch;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -28,8 +30,6 @@ import butterknife.InjectView;
  * Created by Mark on 04/10/2016.
  */
 public class Homescreen extends AppCompatActivity {
-
-
 
     private static final int REQUEST_ADVANCED_OPTIONS = 0;
 
@@ -61,7 +61,7 @@ public class Homescreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Start the Advanced Options activity
-                Intent intent = new Intent(getApplicationContext(), AdvancedSearch.class);
+                Intent intent = new Intent(getApplicationContext(), TutorSearch.class);
                 startActivityForResult(intent, REQUEST_ADVANCED_OPTIONS);
             }
         });
@@ -111,12 +111,12 @@ public class Homescreen extends AppCompatActivity {
 
 
 
-    private void Home() {
+    public void Home() {
         Intent i = new Intent(Homescreen.this, Homescreen.class);
         startActivity(i);
     }
 
-    private void Logout()
+    public void Logout()
     {
         Intent i = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(i);
