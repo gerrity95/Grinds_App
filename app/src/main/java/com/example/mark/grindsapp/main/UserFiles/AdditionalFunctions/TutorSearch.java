@@ -4,10 +4,14 @@ import android.app.ActionBar;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.media.Rating;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -35,7 +39,6 @@ public class TutorSearch extends AppCompatActivity {
 
     private static final int REQUEST_ADVANCED_OPTIONS = 0;
 
-    RatingBar ratingBar;
     LinearLayout tutorLink;
 
     @InjectView(R.id.advanced_options_link) TextView _advancedSubmit;
@@ -58,23 +61,11 @@ public class TutorSearch extends AppCompatActivity {
             }
         });
 
-        ratingBar = (RatingBar) findViewById(R.id.first_ratingBar);
-        ratingBar.setNumStars(5);
-        ratingBar.setRating(4);
-
         tutorLink = (LinearLayout) findViewById(R.id.testlayout);
         tutorView(tutorLink, "James", "Maths", "Masters", 3, R.drawable.headshot1);
+        tutorView(tutorLink, "Mark", "English", "Undergraduate", 2, R.drawable.headshot2);
+        tutorView(tutorLink, "Sarah", "History", "Arts Degree", 5, R.drawable.headshot3);
 
-        /*
-        LinearLayout firstTutor = new LinearLayout(this);
-        firstTutor.setOrientation(LinearLayout.HORIZONTAL);
-
-        TextView textView = new TextView(this);
-        textView.setText("Hello");
-
-        firstTutor.addView(textView);
-        tutorLink.addView(firstTutor);
-        */
     }
 
     @Override
@@ -90,50 +81,48 @@ public class TutorSearch extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    private void tutorView(LinearLayout lt, String name, String Subject, String qualifications, int rating, int photoUrl)
+    private void tutorView(LinearLayout lt, String name, String subject, String qualifications, int rating, int photoUrl)
     {
         LinearLayout primary = new LinearLayout(this);
         primary.setOrientation(LinearLayout.HORIZONTAL);
         primary.setWeightSum(2);
+        primary.setPadding(0, 10, 0, 10);
+        primary.setBackgroundResource(R.drawable.home_bottom_border);
 
-        LinearLayout.LayoutParams secondaryParams = new LinearLayout.LayoutParams(0, 100);
+        LinearLayout.LayoutParams secondaryParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams ratingBarDetails = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
         secondaryParams.weight = 1;
-        secondaryParams.height = ViewGroup.LayoutParams.WRAP_CONTENT;
-        secondaryParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
 
         LinearLayout secondary = new LinearLayout(this);
         secondary.setOrientation(LinearLayout.VERTICAL);
         secondary.setLayoutParams(secondaryParams);
-
-
+        secondary.setPadding(5, 0, 0, 0);
 
         ImageView tutorPhoto = new ImageView(this);
         tutorPhoto.setLayoutParams(secondaryParams);
         tutorPhoto.setPadding(15, 15, 15, 15);
-
         tutorPhoto.setImageResource(photoUrl);
 
+
         TextView nameView = new TextView(this);
-        nameView.setText("Name: " + name);
-        nameView.setPadding(5, 5, 5, 5);
+        textViewDetails(nameView, "Name: " + name, 10);
 
         TextView subjectView = new TextView(this);
-        subjectView.setText("Subject: " + Subject);
-        subjectView.setPadding(5, 5, 5, 5);
+        textViewDetails(subjectView, "Subjects: " + subject, 10);
 
         TextView qualView = new TextView(this);
-        qualView.setText("Qualifications: " + qualifications);
-        qualView.setPadding(5, 5, 5, 5);
+        textViewDetails(qualView, "Qualifications: " + qualifications, 10);
 
         RatingBar ratingBar = new RatingBar(this, null, android.R.attr.ratingBarStyleSmall);
         ratingBar.setNumStars(5);
         ratingBar.setRating(rating);
-        ratingBar.setPadding(5, 5, 5, 5);
+        ratingBar.setPadding(10, 10, 10, 10);
+        ratingBar.setLayoutParams(ratingBarDetails);
 
         TextView moreDetails = new TextView(this);
-        moreDetails.setText("View Profile...");
-        moreDetails.setPadding(5, 5, 5, 5);
-
+        textViewDetails(moreDetails, "View Profile... ", 10);
+        moreDetails.setTextColor(Color.parseColor("#0645AD"));
 
         secondary.addView(nameView);
         secondary.addView(subjectView);
@@ -142,10 +131,23 @@ public class TutorSearch extends AppCompatActivity {
         secondary.addView(moreDetails);
 
 
-
         primary.addView(secondary);
         primary.addView(tutorPhoto);
         lt.addView(primary);
+    }
+
+    public void textViewDetails(TextView t, String name, int padding)
+    {
+        t.setText(name);
+        t.setPadding(padding, padding, padding, padding);
+
+        LinearLayout.LayoutParams textviewParams = new LinearLayout.LayoutParams(0, 100);
+        textviewParams.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        textviewParams.width = ViewGroup.LayoutParams.MATCH_PARENT;
+
+        t.setLayoutParams(textviewParams);
+
+
     }
 
 

@@ -13,7 +13,7 @@ public class GrindRequest extends Homescreen {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grind_request);
+        setContentView(R.layout.activity_upcoming_grind);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
