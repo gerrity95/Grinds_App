@@ -122,8 +122,11 @@
                     android:layout_height="wrap_content"
                     android:text="@string/upcomingDetails"
                     android:id="@+id/GrindMoreDetails"
+                    android:clickable="true"
+                    android:autoLink="all"
                     android:padding="5dp"
                     android:textColor="#0645AD"/>
+
 
             </LinearLayout>
         </LinearLayout>

@@ -4,7 +4,7 @@ package com.example.mark.grindsapp.main.UserFiles.AdditionalFunctions;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
-import android.icu.text.DateFormat;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
@@ -21,7 +21,6 @@ import com.example.mark.grindsapp.R;
 import com.example.mark.grindsapp.main.UserFiles.Homescreen;
 
 import java.lang.reflect.Field;
-import java.text.Format;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

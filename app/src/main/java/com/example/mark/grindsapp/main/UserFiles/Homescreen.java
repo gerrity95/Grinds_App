@@ -19,6 +19,7 @@ import com.example.mark.grindsapp.main.PreLogin.LoginActivity;
 import com.example.mark.grindsapp.R;
 import com.example.mark.grindsapp.main.UserFiles.AdditionalFunctions.AdvancedSearch;
 import com.example.mark.grindsapp.main.UserFiles.AdditionalFunctions.TutorSearch;
+import com.example.mark.grindsapp.main.UserFiles.AdditionalFunctions.UpcomingGrindDetails;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -33,6 +34,7 @@ public class Homescreen extends AppCompatActivity {
 
     private static final int REQUEST_ADVANCED_OPTIONS = 0;
 
+    @InjectView(R.id.GrindMoreDetails) TextView _grindDetails;
     @InjectView(R.id.tSearchAdvanced) TextView _advancedOptions;
     @InjectView(R.id.tSearchButton) Button _searchButton;
 
@@ -45,9 +47,16 @@ public class Homescreen extends AppCompatActivity {
 
         ButterKnife.inject(this);
 
+        _grindDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the Advanced Options activity
+                Intent intent = new Intent(getApplicationContext(), UpcomingGrindDetails.class);
+                startActivityForResult(intent, REQUEST_ADVANCED_OPTIONS);
+            }
+        });
 
         _advancedOptions.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 // Start the Advanced Options activity

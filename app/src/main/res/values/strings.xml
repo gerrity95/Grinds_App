@@ -50,6 +50,8 @@
     <string name="date_title">Date</string>
     <string name="newSearch">New Search</string>
     <string name="view_profile">View Profile...</string>
+    <string name="upcomingSubject">Subject:</string>
+    <string name="upcomingPrice">Price:</string>
 
 
     <string-array name="times">

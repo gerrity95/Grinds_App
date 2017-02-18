@@ -6,11 +6,79 @@
     android:layout_height="fill_parent"
     android:fitsSystemWindows="true">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/upcomingGrindsTitle"
+            android:id="@+id/textView"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:fontFamily="@string/abc_font_family_display_4_material"/>
 
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
 
-    </ScrollView>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upcomingName"
+                android:id="@+id/GrindName"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upcomingAddress"
+                android:id="@+id/GrindAddress"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upcomingDate"
+                android:id="@+id/GrindDate"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upcomingTime"
+                android:id="@+id/GrindTime"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upcomingSubject"
+                android:id="@+id/GrindSubject"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upcomingPrice"
+                android:id="@+id/GrindPrice"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+<!--
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/map"
+        tools:context=".Test"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+-->
+
+</ScrollView>
