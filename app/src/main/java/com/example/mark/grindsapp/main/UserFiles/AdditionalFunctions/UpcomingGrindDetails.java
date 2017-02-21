@@ -4,15 +4,24 @@ import android.app.SearchManager;
 import android.content.Context;
 
 
+import android.content.Intent;
+import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.mark.grindsapp.R;
 import com.example.mark.grindsapp.main.UserFiles.Homescreen;
+import com.example.mark.grindsapp.main.UserFiles.TutorProfile;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 
 /*
 import android.support.v4.app.FragmentActivity;
@@ -29,15 +38,39 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class UpcomingGrindDetails extends AppCompatActivity {
 
+    private static final int REQUEST_PROFILE = 0;
     //private GoogleMap mMap;
 
     Homescreen home = new Homescreen();
+    TutorSearch tSearch = new TutorSearch();
+    LinearLayout tutorProfile;
+    Context context;
+
+    @InjectView(R.id.tutor_profile) LinearLayout _tutorProfile;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upcoming_grind);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        context = this;
+
+        ButterKnife.inject(this);
+
+        _tutorProfile.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // Start the Advanced Options activity
+                Intent intent = new Intent(getApplicationContext(), TutorProfile.class);
+                startActivityForResult(intent, REQUEST_PROFILE);
+            }
+        });
+
+        tutorProfile = (LinearLayout) findViewById(R.id.tutor_profile);
+        tSearch.tutorView(context, tutorProfile, "James", "Maths", "Masters", 3, R.drawable.headshot1);
+
+
     }
 
 

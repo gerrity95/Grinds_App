@@ -52,6 +52,14 @@
     <string name="view_profile">View Profile...</string>
     <string name="upcomingSubject">Subject:</string>
     <string name="upcomingPrice">Price:</string>
+    <string name="upcomingEmail">Email:</string>
+    <string name="upcomingPhone">Phone:</string>
+    <string name="tutor_bio">Hi! My name is James. I am a maths tutor based in Dublin 12. I have a masters degree in physics and have been tutoring for the past four years. If you would like to book a grind please do and we can organise any arrangements from there.</string>
+    <string name="grind_request">Request Grind</string>
+    <string name="submit_request">Submit Request</string>
+    <string name="tutor_name">James Connolly</string>
+    <string name="tutor_subject">Subject: Maths</string>
+    <string name="tutor_qualification">Qualification: Masters</string>
 
 
     <string-array name="times">
@@ -63,6 +71,15 @@
         <item>19:00</item>
         <item>20:00</item>
         <item>21:00</item>
+    </string-array>
+
+
+    <string-array name="days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
     </string-array>
 
     <string-array name="locations">

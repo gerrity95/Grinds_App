@@ -24,7 +24,8 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:id="@+id/UpcomingGrinds">
 
             <TextView
                 android:layout_width="fill_parent"
@@ -38,6 +39,20 @@
                 android:layout_height="wrap_content"
                 android:text="@string/upcomingAddress"
                 android:id="@+id/GrindAddress"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upcomingEmail"
+                android:id="@+id/GrindEmail"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upcomingPhone"
+                android:id="@+id/GrindPhone"
                 android:padding="5dp" />
 
             <TextView
@@ -69,6 +84,16 @@
                 android:padding="5dp" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tutor_profile"
+            android:clickable="true">
+
+        </LinearLayout>
+
 
     </LinearLayout>
 <!--
