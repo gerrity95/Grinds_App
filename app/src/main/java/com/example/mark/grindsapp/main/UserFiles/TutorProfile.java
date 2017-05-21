@@ -2,6 +2,7 @@ package com.example.mark.grindsapp.main.UserFiles;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
@@ -10,12 +11,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.example.mark.grindsapp.R;
-import com.example.mark.grindsapp.main.UserFiles.AdditionalFunctions.TutorSearch;
+import com.example.mark.grindsapp.framework.util.MenuFunctionality;
+import com.example.mark.grindsapp.main.PreLogin.LoginActivity;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -27,6 +28,7 @@ public class TutorProfile extends AppCompatActivity {
 
     Homescreen home = new Homescreen();
     RatingBar r;
+    MenuFunctionality menuFunctionality = new MenuFunctionality();
 
     Context context;
 
@@ -79,17 +81,25 @@ public class TutorProfile extends AppCompatActivity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
             case R.id.home:
                 //location found
-                home.Home();
+                menuFunctionality.Home();
                 return true;
             case R.id.logout:
-                home.Logout();
+                Logout();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
-
-
         }
+    }
+
+
+    public void Logout()
+    {
+        Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(i);
     }
 }

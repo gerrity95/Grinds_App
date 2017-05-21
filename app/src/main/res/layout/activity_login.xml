@@ -13,7 +13,8 @@
         android:paddingTop="56dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:focusableInTouchMode="true">
 
         <ImageView android:src="@drawable/tutor_logo"
             android:layout_width="fill_parent"

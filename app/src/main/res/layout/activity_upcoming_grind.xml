@@ -85,12 +85,89 @@
 
         </LinearLayout>
 
+
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/tutor_profile"
             android:clickable="true">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="0dp"
+            android:paddingEnd="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:id="@+id/tutor_profiler"
+            android:clickable="true"
+            android:background="@drawable/home_bottom_border">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp">
+
+                <TextView
+                    android:text="Name: James"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nameView"
+                    android:paddingBottom="5dp"/>
+
+                <TextView
+                    android:text="Subject: Maths"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/subjectView"
+                    android:paddingBottom="5dp"/>
+
+                <TextView
+                    android:text="Qualification: Masters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/qualView"
+                    android:paddingBottom="5dp"/>
+
+                <RatingBar
+                    android:id="@+id/ratingBarView"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="45dp"
+                    android:max="5"
+                    android:numStars="5"
+                    android:rating="4.0"
+                    android:stepSize="0.0"
+                    android:paddingBottom="5dp"/>
+
+                <TextView
+                    android:text="View Profile..."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/extraDetailsView"
+                    android:textColor="#0645AD"
+                    android:paddingBottom="5dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/headshot1"
+                android:id="@+id/imageView4"
+                android:layout_weight="1" />
 
         </LinearLayout>
 

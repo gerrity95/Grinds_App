@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -17,6 +18,8 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.mark.grindsapp.R;
+import com.example.mark.grindsapp.framework.util.MenuFunctionality;
+import com.example.mark.grindsapp.main.PreLogin.LoginActivity;
 import com.example.mark.grindsapp.main.UserFiles.TutorProfile;
 
 import butterknife.ButterKnife;
@@ -31,6 +34,8 @@ public class TutorSearch extends AppCompatActivity {
 
     LinearLayout tutorLink;
     private Context context;
+
+    MenuFunctionality menuFunctionality = new MenuFunctionality();
 
     @InjectView(R.id.advanced_options_link) TextView _advancedSubmit;
 
@@ -81,14 +86,17 @@ public class TutorSearch extends AppCompatActivity {
         primary.setPadding(0, 10, 0, 10);
         primary.setBackgroundResource(R.drawable.home_bottom_border);
         primary.isClickable();
-        primary.setOnClickListener(new View.OnClickListener() {
-            //Since we only created one tutor profile all of the links will redirect to it
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), TutorProfile.class);
-                startActivityForResult(intent, REQUEST_ADVANCED_OPTIONS);
-            }
-        });
+
+        if (name.equalsIgnoreCase("James")) {
+            primary.setOnClickListener(new View.OnClickListener() {
+                //Since we only created one tutor profile all of the links will redirect to it
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), TutorProfile.class);
+                    startActivityForResult(intent, REQUEST_ADVANCED_OPTIONS);
+                }
+            });
+        }
 
         LinearLayout.LayoutParams secondaryParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         LinearLayout.LayoutParams ratingBarDetails = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -105,7 +113,6 @@ public class TutorSearch extends AppCompatActivity {
         tutorPhoto.setPadding(15, 15, 15, 15);
         tutorPhoto.setImageResource(photoUrl);
 
-
         TextView nameView = new TextView(mContext);
         textViewDetails(nameView, "Name: " + name, 10);
 
@@ -116,9 +123,7 @@ public class TutorSearch extends AppCompatActivity {
         textViewDetails(qualView, "Qualifications: " + qualifications, 10);
 
         RatingBar ratingBar = new RatingBar(mContext, null, android.R.attr.ratingBarStyleSmall);
-        ratingBar.setNumStars(5);
-        ratingBar.setRating(rating);
-        ratingBar.setPadding(10, 10, 10, 10);
+        ratingBarInfo(ratingBar, 5, rating, 10);
         ratingBar.setLayoutParams(ratingBarDetails);
 
         TextView moreDetails = new TextView(mContext);
@@ -130,7 +135,6 @@ public class TutorSearch extends AppCompatActivity {
         secondary.addView(qualView);
         secondary.addView(ratingBar);
         secondary.addView(moreDetails);
-
 
         primary.addView(secondary);
         primary.addView(tutorPhoto);
@@ -151,5 +155,35 @@ public class TutorSearch extends AppCompatActivity {
 
     }
 
+    public void ratingBarInfo(RatingBar ratingBar, int stars, int rating, int padding)
+    {
+        ratingBar.setNumStars(stars);
+        ratingBar.setRating(rating);
+        ratingBar.setPadding(padding, padding, padding, padding);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            case R.id.home:
+                //location found
+                menuFunctionality.Home();
+                return true;
+            case R.id.logout:
+                Logout();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+    public void Logout()
+    {
+        Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(i);
+    }
 
 }

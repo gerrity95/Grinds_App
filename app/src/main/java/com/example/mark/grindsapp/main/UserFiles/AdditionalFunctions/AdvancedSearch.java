@@ -18,6 +18,8 @@ import android.widget.DatePicker;
 
 
 import com.example.mark.grindsapp.R;
+import com.example.mark.grindsapp.framework.util.MenuFunctionality;
+import com.example.mark.grindsapp.main.PreLogin.LoginActivity;
 import com.example.mark.grindsapp.main.UserFiles.Homescreen;
 
 import java.lang.reflect.Field;
@@ -38,6 +40,7 @@ public class AdvancedSearch extends AppCompatActivity {
     DatePicker datePicker;
 
     Homescreen home = new Homescreen();
+    MenuFunctionality menuFunctionality = new MenuFunctionality();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -81,16 +84,26 @@ public class AdvancedSearch extends AppCompatActivity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
             case R.id.home:
                 //location found
-                home.Home();
+                menuFunctionality.Home();
                 return true;
             case R.id.logout:
-                home.Logout();
+                Logout();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+
+    public void Logout()
+    {
+        Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(i);
     }
 
     public void hideYear(DatePicker dt)
